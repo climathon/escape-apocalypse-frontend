@@ -14,37 +14,42 @@ export class Start extends Component {
     return (
       <Wrapper>
         <Card>
-          <img src="/garbage.png" alt="Garbage" width="30%" />
-          <h2>Challenge #1</h2>
+          <img src="/garbage.png" alt="Garbage" width="20%" />
+          <h2>Verpackungsmüll</h2>
           {!this.state.running &&
             <Subtitle>
-              Duration: 150min
+              Dauer der Challenge: 6 Tage
             </Subtitle>
           }
           <p>
-            Here goes the garbage challenge description.
-            Here goes the garbage challenge description.
-            Here goes the garbage challenge description.
-            Here goes the garbage challenge description.
+          <strong>Schritt 1: </strong><br/>
+            Sammle Müll auf einer Fläche von 1km² in deiner Umgebung auf, sortiere ihn und mache ein Foto davon. 
+            Wie viel davon ist Verpackungsmüll?
+          </p>
+          <p>
+          <strong>Schritt 2: </strong><br/>
+            Betreibe Recycling (recycling, downcycling oder recycling) mit den gefundenen Sachen.
+          </p>
+          <p>
+          <strong>Schritt 3: </strong><br/>
+            Vermeide 21 Tage Plastik in Form von Einweg-Kaffee-Bechern, Plastiktüten, Plastikflaschen und Verpackung von Gemüse
           </p>
           {this.state.running === false &&
             <StyledButton text="Start" change={() => this.setState({running: true})}/>
           }
           {this.state.running &&
             <Message positive>
-              Time left for your challenge <br/>
+              So viel Zeit hast du noch: <br/>
                 <Timer
-                  initialTime={5555000}
+                  initialTime={51800400}
                   direction="backward"
-              >
+                >
                   {() => (
-                      <React.Fragment>
-                          
-                          <Timer.Hours /> hours <br/>
-                          <Timer.Minutes /> minutes<br/>
-                          <Timer.Seconds /> seconds
-                          
-                      </React.Fragment>  
+                    <React.Fragment>                       
+                      <Timer.Hours /> Stunden <br/>
+                      <Timer.Minutes /> Minuten <br/>
+                      <Timer.Seconds /> Sekunden
+                    </React.Fragment>  
                   )}
               </Timer><br/>
               <Button as="p" onClick={() => this.props.history.push('/submit')}>Submit Result</Button>

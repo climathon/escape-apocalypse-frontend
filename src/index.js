@@ -13,6 +13,7 @@ import MyChallenges from './MyChallenges';
 import Submit from './Submit';
 import Success from './Success';
 import Failure from './Failure';
+import PlasticInfo from './PlasticInfo';
 import * as serviceWorker from './serviceWorker';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/submit" exact component={Submit} />
       <Route path="/success" exact component={Success} />
       <Route path="/failure" exact component={Failure} />
+      <Route path="/plasticinfo" exact component={PlasticInfo} />
     </Switch>
   </App>
 </BrowserRouter>, document.getElementById('root'));

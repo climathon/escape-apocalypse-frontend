@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import ChallengeCard from './ChallengeCard'
+import { challenges } from './dummyData'
 
-const ChallengeList = (props) => {
+const ChallengeList = () => {
   return (
     <Wrapper>
       <h2>Challenges</h2>
       <ChallengeCardList>
-        <ChallengeCard />
-        <ChallengeCard />
-        <ChallengeCard />
+        {challenges.map(challenge => <ChallengeCard challenge={challenge}/>)}
       </ChallengeCardList>
     </Wrapper>
   )
@@ -28,4 +27,3 @@ const ChallengeCardList = styled.div`
   width: 90%;
   margin: 0 auto;
 `
-

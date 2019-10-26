@@ -3,15 +3,16 @@ import styled from 'styled-components'
 
 export class ChallengeCard extends Component {
   render() {
+    const { title, description, icon } = this.props.challenge;
     return (
       <Card>
         <ChallengeImage>
-          <img src="/garbage.png" alt="Garbage" width="100%"/>
+          <img src={icon} alt="Garbage" width="100%"/>
         </ChallengeImage>
         <ChallengeText>
-          <h3>Garbage Challenge</h3>
+          <h3>Challenge: <br/>{title}</h3>
           <hr/>
-          <p>Das ist eine Beschreibung der Garbage Challenge. Sie ist wirklich sehr toll. <a href="/challenge">Details</a></p>
+          <p>{description}<a href="/challenge"> Mehr.</a></p>
         </ChallengeText>
       </Card>
     )
@@ -32,7 +33,7 @@ const Card = styled.div`
 `
 
 const ChallengeImage = styled.div`
-  width: 25%
+  width: 20%
 `
 
 const ChallengeText = styled.div`

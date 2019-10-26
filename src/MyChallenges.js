@@ -7,12 +7,8 @@ export class MyChallenges extends Component {
   render() {
     return (
       <Wrapper>
-        <h2 style={{marginBottom: '2rem'}}>
-          My Challenges
-        </h2>
-        <h3>
-          Pending
-        </h3>
+        <h2 style={{marginBottom: '2rem'}}>My Challenges</h2>
+        <h3>Pending</h3>
         <Message
           warning
           style={{textAlign: 'left'}}
