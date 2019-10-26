@@ -2,15 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import ChallengeCard from './ChallengeCard'
 import { challenges } from './dummyData'
+import Background from './Background'
 
 const ChallengeList = () => {
   return (
-    <Wrapper>
-      <h2>Challenges</h2>
-      <ChallengeCardList>
-        {challenges.map(challenge => <ChallengeCard challenge={challenge}/>)}
-      </ChallengeCardList>
-    </Wrapper>
+    <Background>
+      <Wrapper>
+        <h2>Challenges</h2>
+        <ChallengeCardList>
+          {challenges.map(challenge => <ChallengeCard challenge={challenge}/>)}
+        </ChallengeCardList>
+      </Wrapper>
+    </Background>
+    
   )
 }
 

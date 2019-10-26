@@ -12,7 +12,7 @@ export class Success extends Component {
           <Content>
             <h2>Oh nein!</h2>
             <p>Du hast es leider nicht geschafft, die Challenge zu lösen. Leider geht jetzt die Welt unter!</p>
-            <Button basic onClick={() => this.props.history.push('/myChallenges')}>Back to My Challenges</Button>
+            <Button basic onClick={() => this.props.history.push('/myChallenges')}>Zurück zu My Challenges</Button>
           </Content>
         </Wrapper>
       </Background>

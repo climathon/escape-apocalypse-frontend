@@ -2,16 +2,20 @@ import React, { Component } from 'react'
 import {PhotoPicker} from 'aws-amplify-react'
 import styled from 'styled-components'
 import StyledButton from './StyledButton'
+import Background from './Background'
 
 export class Submit extends Component {
   render() {
     return (
-      <Wrapper>
-        <PhotoPicker preview/>
-        <p style={{textAlign: 'center'}}>
-          <StyledButton text="Submit challenge" change={() => this.props.history.push("/myChallenges")}/>
-        </p>
-      </Wrapper>
+      <Background>
+        <Wrapper>
+          <PhotoPicker preview/>
+          <p style={{textAlign: 'center'}}>
+            <StyledButton text="Submit challenge" change={() => this.props.history.push("/myChallenges")}/>
+          </p>
+        </Wrapper>
+      </Background>
+      
     )
   }
 }

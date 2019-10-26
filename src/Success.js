@@ -16,7 +16,7 @@ export class Success extends Component {
             <h2>Glückwunsch!</h2>
             <p>Du hast es geschafft, die Challenge ist gelöst. Dank dir kann die Welt ein wenig aufatmen!</p>
             <Button basic onClick={() => this.props.history.push('/myChallenges')}>
-              Back to My Challenges
+              Zurück zu My Challenges
             </Button>
           </Content>
         </Wrapper>

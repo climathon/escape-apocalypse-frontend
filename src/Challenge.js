@@ -5,6 +5,8 @@ import StyledButton from './StyledButton'
 import { Message, Button } from 'semantic-ui-react'
 import  Timer  from 'react-compound-timer'
 
+import Background from './Background'
+
 export class Start extends Component {
   state = {
     running: false
@@ -12,6 +14,7 @@ export class Start extends Component {
 
   render() {
     return (
+      <Background>
       <Wrapper>
         <Card>
           <img src="/garbage.png" alt="Garbage" width="20%" />
@@ -57,6 +60,7 @@ export class Start extends Component {
           }   
         </Card>
       </Wrapper>
+      </Background>
     )
   }
 }
