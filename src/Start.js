@@ -7,7 +7,7 @@ import StyledButton from './StyledButton';
 
 const Start = (props) => {
   const change = () => {
-    props.history.push('/challenges')
+    props.history.push('/plasticinfo')
   }
     return (
       <>

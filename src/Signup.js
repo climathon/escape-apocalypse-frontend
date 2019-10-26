@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { Form, Grid } from 'semantic-ui-react';
 import StyledButton from './StyledButton';
+import Background from './Background'
 
 export class Signup extends Component {
 
@@ -11,6 +12,8 @@ export class Signup extends Component {
 
   render() {
     return (
+      <Background>
+
       <Grid column={1} verticalAlign={"middle"}>
         <Grid.Row width={12} centered style={{height: '100vh', width: '100%', display: 'flex'}}>
           <Form style={{margin: 'auto'}}>
@@ -26,6 +29,8 @@ export class Signup extends Component {
           </Form>
         </Grid.Row>
       </Grid>
+              
+      </Background>
     )
   }
 }

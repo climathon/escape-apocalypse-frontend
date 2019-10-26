@@ -55,7 +55,7 @@ export class Start extends Component {
                     </React.Fragment>  
                   )}
               </Timer><br/>
-              <Button as="p" onClick={() => this.props.history.push('/submit')}>Submit Result</Button>
+              <Button as="p" onClick={() => this.props.history.push('/submit')}>Fertig!</Button>
               </Message>
           }   
         </Card>

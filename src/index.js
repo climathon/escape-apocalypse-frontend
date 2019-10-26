@@ -15,8 +15,10 @@ import Success from './Success';
 import Failure from './Failure';
 import PlasticInfo from './PlasticInfo';
 import * as serviceWorker from './serviceWorker';
+import './App.css'
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
+
 
 ReactDOM.render(
 <BrowserRouter>

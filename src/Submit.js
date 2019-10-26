@@ -11,11 +11,10 @@ export class Submit extends Component {
         <Wrapper>
           <PhotoPicker preview/>
           <p style={{textAlign: 'center'}}>
-            <StyledButton text="Submit challenge" change={() => this.props.history.push("/myChallenges")}/>
+            <StyledButton text="Fertig!" change={() => this.props.history.push("/myChallenges")}/>
           </p>
         </Wrapper>
       </Background>
-      
     )
   }
 }
