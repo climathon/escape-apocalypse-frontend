@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import { Transition } from 'semantic-ui-react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+const bgImage = "https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=581&q=80"
+
+const colors = {
+  darkBlue: '20,34,48',
+  medBlue: '34, 68, 96'
+}
+
+const Wrapper = styled.div`
+  background-image: linear-gradient(to left top, rgba(${colors.darkBlue},.8), rgba(${colors.medBlue},.8)), url(${bgImage});
+  background-position: center;
+  background-size: cover;  
+  height: 100vh;
+`
+
+
+function App(props) {
+  return ( 
+    <Wrapper>
+      
+        {props.children}
+      
+      
+    </Wrapper>
   );
 }
 
