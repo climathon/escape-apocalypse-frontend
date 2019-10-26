@@ -9,16 +9,14 @@ export class Submit extends Component {
       <Wrapper>
         <PhotoPicker preview/>
         <p style={{textAlign: 'center'}}>
-        <StyledButton text="Submit challenge" change={() => this.props.history.push("/myChallenges")}/>
+          <StyledButton text="Submit challenge" change={() => this.props.history.push("/myChallenges")}/>
         </p>
-        
       </Wrapper>
     )
   }
 }
 
 export default Submit
-
 
 const Wrapper = styled.div`
   width: 90%;

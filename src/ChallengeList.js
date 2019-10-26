@@ -1,21 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Segment, Item } from 'semantic-ui-react'
 import ChallengeCard from './ChallengeCard'
 
 const ChallengeList = (props) => {
   return (
     <Wrapper>
-      
-      
-        <h2>Challenges</h2>
-        <ChallengeCardList>
-          <ChallengeCard />
-          <ChallengeCard />
-          <ChallengeCard />
-        </ChallengeCardList>
-      
-      
+      <h2>Challenges</h2>
+      <ChallengeCardList>
+        <ChallengeCard />
+        <ChallengeCard />
+        <ChallengeCard />
+      </ChallengeCardList>
     </Wrapper>
   )
 }

@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Message, Button, Item, Icon } from 'semantic-ui-react'
+import { Message } from 'semantic-ui-react'
 
 export class MyChallenges extends Component {
-
-  componentDidMount() {
-    setTimeout(() => {this.props.history.push('success')}, 5000)
-  }
 
   render() {
     return (
@@ -22,8 +18,7 @@ export class MyChallenges extends Component {
           style={{textAlign: 'left'}}
           icon='clock outline'
           header='Garbage Challenge'
-          content='Das ist die Beschreibung von der Garbage Challenge.'
-        />
+          content='Das ist die Beschreibung von der Garbage Challenge.' />
         <h3>
           Finished
         </h3>
@@ -33,28 +28,23 @@ export class MyChallenges extends Component {
           icon='check'
           header='Garbage Challenge'
           content='Das ist die Beschreibung von der Garbage Challenge.'
-        />
+          onClick={() => this.props.history.push('/success')} />
         <Message
           positive
           style={{textAlign: 'left'}}
           icon='check'
           header='Garbage Challenge'
           content='Das ist die Beschreibung von der Garbage Challenge.'
-        />
-        
+          onClick={() => this.props.history.push('/success')} />
         <Message
           negative
           style={{textAlign: 'left'}}
           icon='cancel'
           header='Garbage Challenge'
           content='Das ist die Beschreibung von der Garbage Challenge.'
+          onClick={() => this.props.history.push('/failure')}
         />
-        
-
-        
-        
       </Wrapper>
-      
     )
   }
 }

@@ -5,9 +5,7 @@ import StyledButton from './StyledButton'
 import { Message, Button } from 'semantic-ui-react'
 import  Timer  from 'react-compound-timer'
 
-
 export class Start extends Component {
-
   state = {
     running: false
   }
@@ -16,15 +14,13 @@ export class Start extends Component {
     return (
       <Wrapper>
         <Card>
-          <img src="/garbage.png" width="30%" />
+          <img src="/garbage.png" alt="Garbage" width="30%" />
           <h2>Challenge #1</h2>
           {!this.state.running &&
             <Subtitle>
               Duration: 150min
             </Subtitle>
           }
-          
-          
           <p>
             Here goes the garbage challenge description.
             Here goes the garbage challenge description.
@@ -48,14 +44,12 @@ export class Start extends Component {
                           <Timer.Minutes /> minutes<br/>
                           <Timer.Seconds /> seconds
                           
-                      </React.Fragment>
-                      
+                      </React.Fragment>  
                   )}
               </Timer><br/>
               <Button as="p" onClick={() => this.props.history.push('/submit')}>Submit Result</Button>
               </Message>
-          }
-          
+          }   
         </Card>
       </Wrapper>
     )

@@ -7,20 +7,18 @@ export class Success extends Component {
   render() {
     return (
       <Background>
-      <Wrapper>
-         <Icon name={"cancel"} style={{color: "darkred"}} circular size={"massive"}/>
-        <Content>
-        <h2>Oh nein!</h2>
-        <p>Du hast es leider nicht geschafft, die Challenge zu lösen. Leider geht jetzt die Welt unter!</p>
-        <Button basic onClick={() => this.props.history.push('/myChallenges')}>Back to My Challenges</Button>
-        </Content>
-      </Wrapper>
+        <Wrapper>
+          <Icon name={"cancel"} style={{color: "darkred"}} circular size={"massive"}/>
+          <Content>
+            <h2>Oh nein!</h2>
+            <p>Du hast es leider nicht geschafft, die Challenge zu lösen. Leider geht jetzt die Welt unter!</p>
+            <Button basic onClick={() => this.props.history.push('/myChallenges')}>Back to My Challenges</Button>
+          </Content>
+        </Wrapper>
       </Background>
     )
   }
 }
-
-
 
 export default Success
 
