@@ -6,6 +6,13 @@ import 'semantic-ui-css/semantic.min.css'
 
 import App from './App';
 import Start from './Start';
+import Signup from './Signup'
+import Challenge from './Challenge'
+import ChallengeList from './ChallengeList';
+import MyChallenges from './MyChallenges';
+import Submit from './Submit';
+import Success from './Success';
+import Failure from './Failure';
 import * as serviceWorker from './serviceWorker';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -14,7 +21,14 @@ ReactDOM.render(
 <BrowserRouter>
   <App>
     <Switch>
-      <Route path="/" exact component={Start} />
+      <Route path="/start" exact component={Start} />
+      <Route path="/challenge" exact component={Challenge} />
+      <Route path="/" exact component={Signup} />
+      <Route path="/challenges" exact component={ChallengeList} />
+      <Route path="/myChallenges" exact component={MyChallenges} />
+      <Route path="/submit" exact component={Submit} />
+      <Route path="/success" exact component={Success} />
+      <Route path="/failure" exact component={Failure} />
     </Switch>
   </App>
 </BrowserRouter>

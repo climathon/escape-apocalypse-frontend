@@ -1,64 +1,83 @@
 import React, { Component } from 'react'
-import { Grid, Header, Transition, Segment } from 'semantic-ui-react';
 import styled from 'styled-components'
 
 import StyledButton from './StyledButton'
-
-const imgStyle = {
-  width: '40%',
-}
-
+import { Message, Button } from 'semantic-ui-react'
+import  Timer  from 'react-compound-timer'
 
 
 export class Start extends Component {
 
-  state ={
-    visible: false
+  state = {
+    running: false
   }
 
-  change = async () => {
-    await this.setState({visible: false})
-    this.props.history.push('/signup')
-  }
-
-  componentDidMount() {
-  this.setState({visible: true})
-  }
-
-  
   render() {
     return (
-      <Transition visible={this.state.visible} animation="fade left">
-
-      
-      <Grid column={1}>
-        <Grid.Row width={12} centered style={{display: 'flex', height: '100vh'}}>
-          <Segment style={{margin: 'auto'}}>
-
+      <Wrapper>
+        <Card>
+          <img src="/garbage.png" width="30%" />
+          <h2>Challenge #1</h2>
+          {!this.state.running &&
+            <Subtitle>
+              Duration: 150min
+            </Subtitle>
+          }
           
-          <Header as='h2' icon inverted>
-          <img src="/garbage.png" style={imgStyle}/>
-          <div style={{background: 'none', padding: '2rem', borderRadius: '5px'}}>
-          <Header.Content style={{color: 'black'}}>
-          Challenge #1 <br/> Upcycling
-          </Header.Content>
-            <Header.Subheader style={{marginTop: '2rem', color: 'black'}}>
-              Did you know what upcycling is?
-              <ul>
-                <li>Fact Number One</li>
-                <li>Fact Number Two</li>
-                <li>Fact Number Three</li>
-              </ul>
-            </Header.Subheader>
-            <StyledButton text={"Start Challenge"} change={this.change}></StyledButton>
-            </div>
-          </Header>
-          </Segment>
-        </Grid.Row>
-      </Grid>
-      </Transition>
+          
+          <p>
+            Here goes the garbage challenge description.
+            Here goes the garbage challenge description.
+            Here goes the garbage challenge description.
+            Here goes the garbage challenge description.
+          </p>
+          {this.state.running === false &&
+            <StyledButton text="Start" change={() => this.setState({running: true})}/>
+          }
+          {this.state.running &&
+            <Message positive>
+              Time left for your challenge <br/>
+                <Timer
+                  initialTime={5555000}
+                  direction="backward"
+              >
+                  {() => (
+                      <React.Fragment>
+                          
+                          <Timer.Hours /> hours <br/>
+                          <Timer.Minutes /> minutes<br/>
+                          <Timer.Seconds /> seconds
+                          
+                      </React.Fragment>
+                      
+                  )}
+              </Timer><br/>
+              <Button as="p" onClick={() => this.props.history.push('/submit')}>Submit Result</Button>
+              </Message>
+          }
+          
+        </Card>
+      </Wrapper>
     )
   }
 }
 
 export default Start
+
+const Wrapper = styled.div`
+  padding: 1rem;
+  display: flex;
+  height: 100vh;
+`
+const Card = styled.div`
+  background: white;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: auto;
+  width: 95%;
+  text-align: center;
+`
+
+const Subtitle = styled.div`
+  margin-bottom: 2rem
+`

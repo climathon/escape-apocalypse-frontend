@@ -5,7 +5,10 @@ import { Statistic } from 'semantic-ui-react';
 
 import StyledButton from './StyledButton';
 
-const Start = () => {
+const Start = (props) => {
+  const change = () => {
+    props.history.push('/challenges')
+  }
     return (
       <>
         <Top />
@@ -30,7 +33,7 @@ const Start = () => {
                 <Card>
                   Die Luft ist so schlecht, dass man das Haus nicht mehr ohne Atemschutzmaske verlassen kann.
                   Bist DU bereit Mannheim zu retten?
-                  <p style={{textAlign: 'center'}}><StyledButton text={"Ich bin bereit"} /></p>
+                  <p style={{textAlign: 'center'}}><StyledButton text={"Ich bin bereit"} change={change} /></p>
                 </Card>
               </Carousel.Item>
             </Carousel>
