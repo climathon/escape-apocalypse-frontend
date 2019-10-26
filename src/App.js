@@ -1,7 +1,15 @@
 import React from 'react';
-import './App.css';
 import styled from 'styled-components';
-import { Transition } from 'semantic-ui-react'
+
+function App(props) {
+  return ( 
+    <Wrapper>
+        {props.children}
+    </Wrapper>
+  );
+}
+
+export default App;
 
 
 const bgImage = "https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=581&q=80"
@@ -16,18 +24,5 @@ const Wrapper = styled.div`
   background-position: center;
   background-size: cover;  
   height: 100vh;
+  max-height: 100vh;
 `
-
-
-function App(props) {
-  return ( 
-    <Wrapper>
-      
-        {props.children}
-      
-      
-    </Wrapper>
-  );
-}
-
-export default App;
