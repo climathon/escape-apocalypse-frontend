@@ -4,9 +4,11 @@ import styled from 'styled-components'
 
 export class ChallengeCard extends Component {
   render() {
-    const { title, description, icon } = this.props.challenge;
+    const { name, iconUrl, category } = this.props.challenge;
+    let icon = iconUrl
+    let title = category
+    let description = name
     return (
-      
       <Card>
         <ChallengeImage>
           <img src={icon} alt="Garbage" width="100%"/>
@@ -17,7 +19,6 @@ export class ChallengeCard extends Component {
           <p>{description}<a href="/challenge"> Mehr.</a></p>
         </ChallengeText>
       </Card>
-      
     )
   }
 }
